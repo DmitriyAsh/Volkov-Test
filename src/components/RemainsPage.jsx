@@ -4,8 +4,9 @@ import RemainsTable from './RemainsTable';
 const RemainsPage = () => {
 	const chicken = {
 		productName: 'Курица гриль',
-		ingridient: 'Курица',
-		quantity: 145,
+		ingridient1: 'Бедро',
+		ingridient2: 'Филе Грудки',
+		quantity: 66,
 		salesForCurrentDay: 54,
 		currentBalance: 170,
 		id: 0,
@@ -13,17 +14,19 @@ const RemainsPage = () => {
 
 	const BBQ = {
 		productName: 'Шашлык',
-		ingridient: 'Мясо',
-		quantity: 75,
-		salesForCurrentDay: 54,
+		ingridient1: 'Свинина',
+		ingridient2: 'Говядина',
+		quantity: 23,
+		salesForCurrentDay: 42,
 		currentBalance: 100,
 		id: 1,
 	};
 
 	const grilledVegetables = {
 		productName: 'Овощи гриль',
-		ingridient: 'Овощи',
-		quantity: 42,
+		ingridient1: 'Баклажаны',
+		ingridient2: 'Кабачки',
+		quantity: 15,
 		salesForCurrentDay: 20,
 		currentBalance: 60,
 		id: 2,
@@ -38,8 +41,8 @@ const RemainsPage = () => {
 			<table className={cl.remains_table}>
 				<thead>
 					<tr>
-						<th className={cl.remains_th}>Название продукта</th>
-						<th className={cl.remains_th}>Ингридиент</th>
+						<th className={cl.remains_th}>Название товара</th>
+						<th className={cl.remains_th}>Ингредиент</th>
 						<th className={cl.remains_th}>
 							Количество готового продукта
 						</th>
@@ -52,7 +55,8 @@ const RemainsPage = () => {
 				{goods.map((i) => (
 					<RemainsTable
 						productName={i.productName}
-						ingridient={i.ingridient}
+						ingridient1={i.ingridient1}
+						ingridient2={i.ingridient2}
 						quantity={i.quantity}
 						salesForCurrentDay={i.salesForCurrentDay}
 						currentBalance={i.currentBalance}

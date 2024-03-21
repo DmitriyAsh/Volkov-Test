@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
 .remains_td {
 	text-align: center;
 	color: #fff;
@@ -13,4 +15,16 @@
 
 .remains_tr {
 	transition: all .2s;
+}
+
+.product_name_button {
+	padding: 8px;
+	border-radius: 14px;
+	border: none;
+	background-color: transparent;
+	color: #fff;
+	cursor: pointer;
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	font-size: 16px;
 }

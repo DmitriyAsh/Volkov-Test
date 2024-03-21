@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+.myModal {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	display: none;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.myModalContent {
+	padding: 25px;
+	background: #a6a6a6;
+	border-radius: 16px;
+	min-width: 250px;
+}
+
+.myModal.active {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.quantity,
+.ingridient {
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+
+.modal_select {
+	width: 150px;
+	height: 30px;
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	border-radius: 14px;
+	padding: 5px;
+	background-color: #a6a6a6;
+	border: 1px solid #000;
+}
+
+.modal_ingridient_block {
+	margin-bottom: 10px;
+}
+
+.modal_input {
+	margin-bottom: 10px;
+	width: 150px;
+	height: 30px;
+	border-radius: 14px;
+	padding: 10px;
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	background-color: #a6a6a6;
+	border: 1px solid #000;
+	outline: none;
+}
+
+.modal_button {
+	width: 150px;
+	height: 30px;
+	border-radius: 14px;
+	background-color: #222222;
+	color: #fff;
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	border: none;
+}

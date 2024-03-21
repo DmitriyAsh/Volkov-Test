@@ -30,6 +30,7 @@
 	border: 1px solid #4c4c4c;
 	border-radius: 8px;
 	background-color: #222222;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .login_input,

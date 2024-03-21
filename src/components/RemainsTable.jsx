@@ -1,21 +1,48 @@
+import { useState } from 'react';
 import cl from '../styles/RemainsTable.module.css';
+import Modal from './Modal';
 
 const RemainsTable = ({
 	productName,
-	ingridient,
+	ingridient1,
+	ingridient2,
 	quantity,
 	salesForCurrentDay,
 	currentBalance,
 }) => {
+	const [modal, setModal] = useState(false);
+	const [newQuantity, setNewQuantity] = useState('');
+
+	const handleQuantityChange = (value) => {
+		setNewQuantity(value);
+	};
+
 	return (
 		<tbody>
 			<tr className={cl.remains_tr}>
-				<td className={cl.remains_td}>{productName}</td>
-				<td className={cl.remains_td}>{ingridient}</td>
-				<td className={cl.remains_td}>{quantity}</td>
+				<td className={cl.remains_td}>
+					<button
+						className={cl.product_name_button}
+						onClick={() => setModal(true)}
+					>
+						{productName}
+					</button>
+				</td>
+				<td className={cl.remains_td}>
+					{ingridient1}, {ingridient2}
+				</td>
+				<td className={cl.remains_td}>{quantity + +newQuantity}</td>
 				<td className={cl.remains_td}>{salesForCurrentDay}</td>
 				<td className={cl.remains_td}>{currentBalance}</td>
 			</tr>
+			<Modal
+				visible={modal}
+				setVisible={setModal}
+				ingridient1={ingridient1}
+				ingridient2={ingridient2}
+				quantity={quantity}
+				onChange={handleQuantityChange}
+			/>
 		</tbody>
 	);
 };
