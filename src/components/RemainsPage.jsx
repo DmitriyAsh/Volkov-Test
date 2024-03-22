@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import cl from '../styles/RemainsPage.module.css';
 import RemainsTable from './RemainsTable';
 import { Link } from 'react-router-dom';
