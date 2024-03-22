@@ -3,7 +3,7 @@ import cl from '../styles/Modal.module.css';
 
 const Modal = ({ visible, setVisible, ingridient1, ingridient2, onChange }) => {
 	const rootClasses = [cl.myModal];
-	const [inputValue, setInputValue] = useState('');
+	const [inputValue, setInputValue] = useState(0);
 
 	if (visible) {
 		rootClasses.push(cl.active);
@@ -42,7 +42,7 @@ const Modal = ({ visible, setVisible, ingridient1, ingridient2, onChange }) => {
 						className={cl.modal_input}
 						type='text'
 						value={inputValue}
-						onChange={(e) => setInputValue(e.target.value)}
+						onChange={(e) => setInputValue(Number(e.target.value))}
 					/>
 				</div>
 				<button

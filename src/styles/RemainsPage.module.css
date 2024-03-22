@@ -30,3 +30,40 @@
 	font-family: "Roboto", sans-serif;
 	font-weight: 500;
 }
+
+.exit_button {
+	width: 200px;
+	height: 40px;
+	margin-top: 15px;
+	margin-right: 10px;
+	border-radius: 12px;
+	background-color: #222222;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 100;
+	color: #fff;
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+}
+
+.user_info {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 100;
+	left: 0;
+	max-width: 400px;
+	height: 50px;
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+	color: #fff;
+	margin-top: 10px;
+	margin-left: 10px;
+	font-size: 30px;
+}

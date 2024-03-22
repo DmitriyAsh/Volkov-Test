@@ -9,12 +9,14 @@ const RemainsTable = ({
 	quantity,
 	salesForCurrentDay,
 	currentBalance,
+	onQuantityChange,
 }) => {
 	const [modal, setModal] = useState(false);
 	const [newQuantity, setNewQuantity] = useState('');
 
 	const handleQuantityChange = (value) => {
 		setNewQuantity(value);
+		onQuantityChange(productName, value);
 	};
 
 	return (
