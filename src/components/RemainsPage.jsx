@@ -3,6 +3,7 @@ import cl from '../styles/RemainsPage.module.css';
 import RemainsTable from './RemainsTable';
 import { Link } from 'react-router-dom';
 import { useUserStore } from '../store/user';
+import { useGoodsStore } from '../store/goodsValue';
 
 const RemainsPage = () => {
 	const goods = useRef([
@@ -36,13 +37,15 @@ const RemainsPage = () => {
 	]);
 
 	const { userData } = useUserStore();
+	const { setGoodsData } = useGoodsStore();
 
 	const handleQuantity = (productName, quantity) => {
-		const exist = goods?.current?.find(
+		const exist = goods?.current?.findIndex(
 			(i) => i.productName === productName
 		);
-		if (exist) {
-			exist.quantity = quantity;
+		if (exist !== -1) {
+			goods.current[exist].quantity += quantity;
+			setGoodsData(goods);
 		}
 	};
 

@@ -33,7 +33,7 @@ const RemainsTable = ({
 				<td className={cl.remains_td}>
 					{ingridient1}, {ingridient2}
 				</td>
-				<td className={cl.remains_td}>{quantity + +newQuantity}</td>
+				<td className={cl.remains_td}>{quantity}</td>
 				<td className={cl.remains_td}>{salesForCurrentDay}</td>
 				<td className={cl.remains_td}>{currentBalance}</td>
 			</tr>

@@ -9,7 +9,6 @@ const LoginPage = () => {
 
 	const handleAuth = () => {
 		setUserData(userInfo);
-		console.log(userInfo);
 	};
 
 	return (
